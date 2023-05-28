@@ -1,0 +1,235 @@
+/*CSS de Etiquetas*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #222;
+    color: white;
+    font: 200 14px 'Poppins', sans-serif;
+}
+h2{
+    font-size: 36px; /*Tamaño de letra de los h2*/
+    line-height: 36px; /*Configura el espacio entre las líneas de texto*/
+}
+h3{
+    color: #999;
+    font-size: 18px; /*Tamaño de letra para los h3*/
+    font-weight: 300;
+}
+nav{
+    position: fixed; /*Para que se mueva mi Menu de Navegacion*/
+    width: 100%;
+    height: 55px;
+    background-color: #222;
+    border-bottom: 1px solid white;
+    padding-top: 10px;
+    text-align: center;
+}
+nav ul{
+    display: inline-block;
+}
+nav ul li{
+    padding-top: 12px;
+}
+section{
+    padding: 10px 100px 10px 100px;
+}
+p{
+    text-align: justify;
+}
+cite{
+    font-weight: 300; /*Grosor de letra para los cite*/
+}
+i{
+    font-size: 24px;
+}
+i:hover{ /*Cuando yo pase el mouse sobre este i, va a realizar lo siguiente:*/
+    color: #ffc900;
+}
+a{
+    text-decoration: none;
+}
+a:any-link{
+    color:white; /*Para que los logos de redes aparezcan blancos*/
+}
+a:-webkit-any-link{ /*Este selector pone todos los "a" en BLANCO*/
+    color:white;
+}
+a:-moz-any-link{
+    color: white;
+}
+a:hover{
+    color: #ffc900;
+}
+ul{
+    list-style: none; /*Para quitar los puntos blancos de la lista*/
+}
+li{ /*Colocamos todo nuestro menu de navegacion en horizontal*/
+    float: left;
+    margin-right: 5px;
+}
+button{
+    border-radius: 10px;
+}
+footer{
+    height: 55px;
+    padding-top: 10px;
+    text-align: center;
+}
+footer ul{
+    display:inline-block;
+}
+footer ul li{
+    float: left;
+}
+/*******************************************************************************/
+/***************************** CSS ID's y Clases *******************************/
+.hastag{
+    color: #ffc900;
+}
+.seccion{
+    padding: 10px 100px 10px 100px; /*Arriba Derecha Abajo Izquierda*/
+}
+.logo{
+    padding-top: 0px; /*Para que la img de logo este pegada arriba*/
+}
+#redessociales{
+    margin-top: 20px;
+    list-style: none; /*Para desaparecer las viñetas del listado*/
+}
+#inicio{
+    background-image: url("../img/inicio.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 280px;
+    padding-top: 75px;
+}
+#experiencia{
+    background-color: White;
+    color: #222;
+}
+#portafolio{
+    border-top: 1px solid #ffc900;
+}
+.masinfo button{
+   background-color: #ffc900;
+   font-weight: 600;
+   padding-left: 15px;
+   padding-right: 15px;
+   margin-top: 5px;
+   padding: 5px; 
+}
+/********************grid sobremi*****************/
+#sobremi{
+    display: grid;
+    grid-template-columns: 250px 1fr;
+}
+#sobremi h2{
+    margin-bottom: 15px;
+}
+#sobremi .masinfo{
+    margin-top: 15px
+}
+#sobremi .masinfo button{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    padding-right: 30px
+}
+#contactar{
+    background-color: #ffc900;
+    color: #222;
+}
+/***********************card portafolio**********************************/
+.filaportafolio{
+    display: flex; /*Flex Box*/
+    flex-direction: row; /*Los 4 elementos div estarán en fila*/
+    flex-wrap: wrap; /*Si no hay espacio se pone en columna*/
+    justify-content: space-between; /*espacios equidistantes*/
+    gap: 30px 30px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.card{
+    width: 250px;
+    background-color: #191919;
+    border-radius: 15px;
+}
+.card img, .card video{
+    border-radius: 15px 15px 0 0;
+}
+.card h3, .card :enabled{
+    color: #ffc900;
+}
+.card h4{
+    margin: 0 5px 5px 0;
+}
+.card h3, .card h4, .card p, .card .masinfo{
+    padding: 0 15px; 
+}
+.card.masinfo{
+    margin: 15px 0px 15px 0px;
+    height: 26px;
+}
+.card.sep{
+    margin:0 5px 5px 0;
+    border:1px solid  #ffc900;
+}
+.card .masinfo button{
+    float: right;
+}
+
+/*********************card experiencia***********************/
+.gridexp{
+    display: grid;
+    grid-template-columns: repeat(4,350px);
+    grid-gap:10px;
+    justify-content: space-between;
+    align-content: space-around;
+}
+.cardexp{
+    background-color: #222;
+    border-radius: 15px;
+    color: white;
+    padding: 10px 15px;
+}
+.cardexp h2{
+    margin-bottom: 5px;
+}
+.cardexp h3{
+    margin-bottom: 20px;
+}
+.cardexp p{
+    margin-bottom: 20px;
+}
+.cardexp ul{
+    display: flex;
+    justify-content: flex-end;
+}
+.cardexp li{
+    height: 30px;
+}
+
+/********************Formulario******************/
+.itemform{
+    display: grid;
+    grid-template-columns: 150px 350px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.itemform label{
+    font-weight: 700;
+}
+.itemform input, .itemform textarea{
+    border-radius: 5px;
+    border: 1px solid white;
+}
+input[type="submid"]{
+    background-color: #222;
+    border: 1px solid #222;
+    color: white;
+    padding: 10px;
+    grid-column: 2/3;
+    justify-self: end;
+}
